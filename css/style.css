@@ -1,0 +1,376 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* global style  */
+body{
+    background-color: #F5F5F5;
+}
+:root{
+    --mainColor: #0078FF;
+    --titleColor: #1E1E1E;
+}
+section{
+    padding: 2% 0;
+}
+.title h1{
+    font-size: 3em;
+    font-weight: 600;
+    letter-spacing: 5px;
+    position: relative;
+    color: var(--titleColor);
+    text-transform: uppercase;
+}
+.title h1::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 50px;
+    background: var(--mainColor);
+    transform: translate(-50%, -50%);
+    border-radius: 10px 0 10px 0;
+    z-index: -1;
+}
+.title span{
+    color: #fff;
+}
+/* end global style  */
+
+/* ------------start header-------------- */
+header{
+    background-image: url(../img/intro-bg.jpg);
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+}
+.overlay{
+    height: 100vh;
+    background-color: #0006;
+}
+.overlay .navbar{
+    position: fixed;
+    width: 100%;
+    color: #fff;
+    z-index: 99999;
+}
+.overlay .navbar .navbar-brand{
+    font-size: 1.6em;
+    font-weight: 600;
+    color: #fff;
+}
+.overlay .navbar .nav-link.active{
+    color: var(--mainColor);
+}
+.overlay .navbar .nav-link{
+    color: #fff;
+    font-weight: 600;
+}
+.overlay .navbar .nav-link:hover{
+    color: var(--mainColor);
+}
+.overlay .navbar form a{
+    color: #fff;
+}
+.overlay .navbar form .fa-facebook-f:hover{
+    color: #4867AA;
+}
+.overlay .navbar form .fa-linkedin-in:hover{
+    color: #0A66C2;
+}
+.overlay .navbar form .fa-google-plus-g:hover{
+    color: #DD4D42;
+}
+.overlay .navbar-toggler-icon img
+{
+    width: 30px;
+}
+.overlay .head-text{
+    height: 100vh;
+}
+.overlay .head-text h1{
+    color: #fff;
+    font-size: 3em;
+    font-weight: 600;
+}
+.overlay .head-text span{
+    color: var(--mainColor);
+    font-size: 1.5em;
+    font-weight: 600;
+}
+/* ------------end header-------------- */
+
+
+/* ------------ start about -------------- */
+.about{
+    background-color: #fff;
+    width: 80%;
+    color: #000;
+}
+.about .about-info{
+    font-size: 14px;
+}
+.about.aboutImg img{
+    width: 120px;
+}
+.about .about-text .line{
+    width: 15%;
+    height: 2px;
+    background: var(--mainColor);
+    margin-bottom: 15px
+}
+.about .about-text p{
+    font-size: 14px;
+}
+.about .progress{
+    height: 0.5em;
+}
+.about h6{
+    font-size: 14px;
+}
+/* ------------end about-------------- */
+
+
+/* ------------start services-------------- */
+
+.services .content{
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+}
+.icon{
+    position: relative;
+    z-index: 2;
+}
+.services .content::before{
+    content: "";
+    width: 100%;
+    height: 0px;
+    background: var(--mainColor);
+    opacity: 0.5;
+    position: absolute;
+    bottom: 110%;
+    left: 0;
+    transform: scale(2);
+    border-radius: 0 0 80% 80% / 0 0 150% 150%;
+    transition: all 0.5s;
+}
+.services .content:hover::before{
+    height: 100%;
+}
+.services .content i{
+    font-size: 25px;
+    padding: 20px 0;
+    border: 8px solid var(--mainColor);
+    width: 25%;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+.services .content:hover i{
+    background: var(--mainColor);
+    border-color: #000;
+    color: #fff;
+}
+.services .content h4{
+    font-size: 20px;
+    margin: 10px 0;
+    color: var(--titleColor);
+}
+.services .content p{
+    font-size: 14px;
+}
+/* ------------end services-------------- */
+
+/* ------------ start count -------------- */
+.count{
+    background-image: url(../img/counters-bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+.count .count-overlay{
+    background: #0078ff85;
+    padding: 7rem;
+}
+.count .count-overlay i{
+    font-size: 30px;
+    border: 5px solid;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    line-height: 2;
+}
+.count .count-overlay h5{
+    margin-bottom: 0;
+    font-size: 30px;
+    font-weight: 600;
+}
+/* ------------end count -------------- */
+
+/* ------------ start portfolio -------------- */
+
+/* it dosen't work   */
+.port-contain .port-img{
+    overflow: hidden;
+}
+.port-contain .port-img img{
+    transition: all 1s;
+}
+.port-contain:hover .port-img img{
+    transform: scale(1.3);
+}
+.port-contain .port-info h4{
+    font-size: 1.2rem;
+}
+.port-contain .port-info .port-icon p{
+    font-size: 12px;
+}
+.port-contain .port-info .port-icon i{
+    border: 1px solid var(--mainColor);
+    width: 30px;
+    height: 30px;
+    line-height: 1.8;
+    border-radius: 50%;
+}
+/* ------------end portfolio -------------- */
+
+/* ------------ start testimonial -------------- */
+.testimonial{
+    background-image: url(../img/overlay-bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+.testimonial .testi-overlay{
+    background: #0078ff85;
+    padding: 10rem 0;
+}
+.testi-overlay .testi-text{
+    padding: 0 10px;
+    margin: auto;
+    width: 75%;
+}
+.testimonial .testi-overlay .carousel-indicators{
+    top: 100%;
+}
+.testimonial .testi-overlay .carousel-indicators [data-bs-target]{
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50%;
+}
+/* ------------ end testimonial -------------- */
+
+
+/* ------------ start blog -------------- */
+
+
+/* ------------ end blog -------------- */
+.blog-contain .blog-info{
+    position: relative;
+}
+.blog-contain .blog-info .b-title{
+    position: absolute;
+    bottom: 93%;
+    left: 50%;
+    background-color: var(--mainColor);
+    color: #fff;
+    transform: translateX(-50%);
+    padding: 2px 15px;
+    border-radius: 5px;
+}
+.blog-contain .blog-info .b-title h6{
+    font-size: 14px;
+    margin-bottom: 0;
+}
+.blog-contain .blog-info a{
+    text-decoration: none;
+    color: #000;
+}
+.blog-contain .blog-info a:hover{
+    color: var(--mainColor);
+}
+.blog-contain .blog-info p{
+    font-size: 14px;
+    margin-top: 10px;
+}
+.blog-contain .blog-icon{
+    box-shadow: 0 0 5px #b9b9b9;
+}
+.blog-contain .blog-icon .blog-right img{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+.blog-contain .blog-icon p{
+    margin-bottom: 0 !important;
+    margin-left: 8px;
+    font-size: 14px;
+}
+/* ------------ start contact footer -------------- */
+footer{
+    background-image: url(../img/overlay-bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+.contact-overlay{
+    background: #0078ff85;
+    padding: 5rem 0;
+}
+.contain-left textarea{
+    resize: none;
+}
+.contain-right h3,
+.contain-left h3{
+    position: relative;
+    margin-bottom: 25px;
+}
+.contain-right h3::before,
+.contain-left h3::before{
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 30%;
+    height: 3px;
+    background: var(--mainColor);
+}
+.contain-right p{
+    font-size: 14px;
+}
+.contain-right .fa-ul{
+    margin-left: 1.2em !important;
+}
+.contain-right .fa-ul li{
+    font-size: 14px;
+}
+.contain-right .fa-ul li span{
+    color: var(--mainColor);
+}
+.contain-right a i{
+
+    border: 1px solid var(--mainColor);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2.4;
+    color: #000;
+    transition: all 0.3s;
+}
+.contain-right a:hover i{
+    background: var(--mainColor);
+    color: #fff;
+}
+/* ------------ end contact footer -------------- */
+
+
+
+@media screen and (max-width: 568px) {
+    .testi-overlay .testi-text{
+        width: 100%;
+    }
+}
+
